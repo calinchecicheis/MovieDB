@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie DB</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Movie DB search</h1>
+    <div id="dialog" title="Movie Details">Hello!</div>
+    <div class="search">
+      <input type="text" id="keyword"  value="" placeholder="Search by keyword" />
+      <button onclick="searchMovies()">Search</button>
+      <br>
+      Release year: <input id="yearMin" value="" placeholder="yyyy" size="3" maxlength="4" /> to <input id="yearMax" value="" placeholder="yyyy" size="3" maxlength="4" />
+      Rating: <input id="ratingMin" value="7" size="3" maxlength="2" /> to <input id="ratingMax" value="10" size="3" maxlength="2" />
+      Genre: <select id="genres"></select><br>
+    </div>
+    <div class="sort">
+      Sort by: <select id="sort">
+
+      <option value="popularity.desc">
+        Popularity
+      </option>
+      <option value="release_date">
+        Release date
+      </option>
+      <option value="revenue.desc">
+        Revenue
+      </option>
+      <option value="vote_average.desc">
+        Vote Average
+      </option>
+      <option value="vote_count.desc">
+        Votes
+      </option>
+    </select>
+    </div>
+
+    <div class="paging">
+        <div id="paging">
+
+        </div>
+        <div id="pageCount"></div>
+    </div>
+
+
+    <div id="results"></div>
+
+    <div class="paging"></div>
+
+
+
+
+
+  </body>
+</html>
